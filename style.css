@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: aqua;
+}
+html{
+    font-size: 62.5%;
+}
+.text_animate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    visibility: hidden;
+}
+.text_animate h1{
+    position: absolute;
+    font-size: 5rem;
+    font-weight: 700;
+    color: rgba(122, 251, 0, 0.027);
+    animation: animate 10s linear infinite 2s;
+}
+@keyframes animate {
+    0%{
+        transform: translateX(-200%);
+        visibility: visible;
+    }
+    50%{
+        color: rgb(41, 8, 71);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+@media screen and (max-width: 768px) {
+    .text_animate h1{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}
